@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تأكيد الحجز</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Amiri', serif;
+      background: linear-gradient(to bottom, #e0f2f1, #ffffff);
+      direction: rtl;
+      text-align: center;
+    }
+
+    .container {
+      background-color: #ffffff;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #00796b;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #004d40;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .home-btn {
+      background-color: #00796b;
+      color: white;
+      margin: 10px;
+    }
+
+    .logout-btn {
+      background-color: crimson;
+      color: white;
+      margin: 10px;
+    }
+
+    .icon {
+      font-size: 40px;
+      color: green;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="icon">✅</div>
+    <h1>تم حجز الجلسة بنجاح!</h1>
+    <p>شكرًا لك يا <span class="highlight" id="userName">...</span></p>
+    <p>لقد تم تأكيد حجزك مع الشيخ <span class="highlight" id="sheikhName">...</span></p>
+    <p>📅 التاريخ: <span class="highlight" id="sessionDate">...</span></p>
+    <p>⏰ الوقت: <span class="highlight" id="sessionTime">...</span></p>
+
+    <button class="home-btn" onclick="goHome()">العودة للرئيسية</button>
+    <button class="logout-btn" onclick="logout()">تسجيل الخروج</button>
+  </div>
+
+  <script>
+    const user = localStorage.getItem("loggedInUser");
+    const sheikh = localStorage.getItem("selectedSheikh");
+    const date = localStorage.getItem("selectedDate");
+    const time = localStorage.getItem("selectedTime");
+
+    document.getElementById("userName").textContent = user || "المستخدم";
+    document.getElementById("sheikhName").textContent = sheikh || "غير معروف";
+    document.getElementById("sessionDate").textContent = date || "--/--/----";
+    document.getElementById("sessionTime").textContent = time || "--:--";
+
+    function goHome() {
+      window.location.href = "index1.html";
+    }
+
+    function logout() {
+      localStorage.clear();
+      window.location.href = "index1.html";
+    }
+  </script>
+
+</body>
+</html>

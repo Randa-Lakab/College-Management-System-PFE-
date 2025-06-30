@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>احجز جلسة مع الشيخ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Amiri', serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+      text-align: center;
+      direction: rtl;
+      margin: 0;
+    }
+
+    h1 {
+      color: #00695c;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      margin: 40px auto;
+      max-width: 500px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    select, input[type="date"], input[type="time"], textarea {
+      padding: 12px;
+      font-size: 18px;
+      margin: 10px 0;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #00796b;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .logout {
+      background-color: rgb(216, 50, 83);
+      width: 20%;
+      margin: 30px auto 0;
+      display: block;
+    }
+    .back-button {
+      position: absolute;
+      top: 68px;
+      right: 20px;
+      background-color: #ffffff;
+      color: #4CAF50;
+      padding: 10px 18px;
+      border: 2px solid #4CAF50;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <a href="index1.html" class="back-button"><i class="fas fa-arrow-right"></i>العودة لصفحة القراءة</a>
+  <h1>احجز جلسة مع الشيخ</h1>
+
+  <div class="container">
+    <form action="reservations.php" method="POST">
+  <select id="sheikh" name="sheikh" required>
+    <option value="">اختر الشيخ</option>
+    <option value="الشيخ أحمد">الشيخ أحمد</option>
+    <option value="الشيخ عبد الله">الشيخ عبد الله</option>
+    <option value="الشيخ ياسين">الشيخ ياسين</option>
+    <option value="الشيخ محمد">الشيخ محمد</option>
+  </select>
+
+  <input type="date" id="date" name="date" required>
+  <input type="time" id="time" name="time" required>
+  <textarea placeholder="ملاحظات (اختياري)" name="notes"></textarea>
+
+  <input type="hidden" name="username" id="usernameField">
+
+  <button type="submit">المتابعة للدفع (1000 دج)</button>
+</form>
+  </div>
+
+  <button class="logout" onclick="logout()">تسجيل الخروج</button>
+
+  <script>
+    const user = localStorage.getItem("loggedInUser");
+    if (!user) {
+      window.location.href = "index1.html";
+    }
+
+    function reserveSession(e) {
+      e.preventDefault();
+
+      const sheikh = document.getElementById("sheikh").value;
+      const date = document.getElementById("date").value;
+      const time = document.getElementById("time").value;
+
+      localStorage.setItem("selectedSheikh", sheikh);
+      localStorage.setItem("selectedDate", date);
+      localStorage.setItem("selectedTime", time);
+
+      // تحويل إلى صفحة الدفع
+      window.location.href = "payai.html";
+    }
+
+    function logout() {
+      localStorage.clear(); // تم إضافة هذا السطر
+      window.location.href = "index1.html";
+    }
+  </script>
+
+
+</body>
+</html>

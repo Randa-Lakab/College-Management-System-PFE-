@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>ما لا يسع المسلم جهله</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Amiri', serif;
+      background-color: #eef7f4;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+
+    header {
+      background-color: #004d40;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .books-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .book {
+      background-color: #f9f9f9;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      box-sizing: border-box;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .book:hover {
+      transform: translateY(-5px);
+    }
+
+    .book-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #00695c;
+      margin-bottom: 10px;
+    }
+
+    .book-description {
+      margin-bottom: 15px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .book-buttons a {
+      display: inline-block;
+      margin-left: 5px;
+      margin-top: 8px;
+      background-color: #00796b;
+      color: white;
+      padding: 8px 14px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .book-buttons a.download {
+      background-color: #388e3c;
+    }
+
+    .logout-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .logout-btn {
+      background-color: #c62828;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .book {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ما لا يسع المسلم جهله</h1>
+  <p>منصة قراءة وتحميل كتب في العلوم الإسلامية</p>
+</header>
+
+<div class="container">
+  <div class="books-grid">
+
+    <div class="book">
+      <div class="book-title">كتاب النحو</div>
+      <div class="book-description">شرح مبسط لقواعد النحو العربي مع أمثلة وتدريبات.</div>
+      <div class="book-buttons">
+        <a href="nahw.html" target="_blank">قراءة الكتاب</a>
+        <a href="nahw.html" download class="download">تحميل </a>
+      </div>
+    </div>
+
+    <div class="book">
+      <div class="book-title">كتاب الصرف</div>
+      <div class="book-description">دروس في الصرف العربي من الميزان الصرفي إلى الإعلال والإبدال.</div>
+      <div class="book-buttons">
+        <a href="sarf.html" target="_blank">قراءة الكتاب</a>
+        <a href="sarf.html" download class="download">تحميل </a>
+      </div>
+    </div>
+
+    <div class="book">
+      <div class="book-title">كتاب السيرة النبوية</div>
+      <div class="book-description">سيرة النبي محمد صلى الله عليه وسلم منذ الولادة حتى الوفاة.</div>
+      <div class="book-buttons">
+        <a href="sira.html" target="_blank">قراءة الكتاب</a>
+        <a href="sira.html" download class="download">تحميل </a>
+      </div>
+    </div>
+
+    <div class="book">
+      <div class="book-title">كتاب الأحاديث النبوية</div>
+      <div class="book-description">مجموعة من الأحاديث الصحيحة مع الشرح والتفسير المبسط.</div>
+      <div class="book-buttons">
+        <a href="hadith.html" target="_blank">قراءة الكتاب</a>
+        <a href="hadith.html" download class="download">تحميل</a>
+      </div>
+    </div>
+
+    <div class="book">
+      <div class="book-title">كتاب أحكام التجويد</div>
+      <div class="book-description">شرح مفصل لقواعد تلاوة القرآن الكريم وأحكام التجويد.</div>
+      <div class="book-buttons">
+        <a href="tajwid.html" target="_blank">قراءة الكتاب</a>
+        <a href="tajwid.html" download class="download">تحميل </a>
+      </div>
+    </div>
+
+    <div class="book">
+      <div class="book-title">كتاب العقيدة</div>
+      <div class="book-description">مبادئ العقيدة الإسلامية مثل التوحيد، الإيمان بالله، والرسل والكتب.</div>
+      <div class="book-buttons">
+        <a href="akida.html" target="_blank">قراءة الكتاب</a>
+        <a href="akida.html" download class="download">تحميل </a>
+      </div>
+    </div>
+
+    <div class="book">
+      <div class="book-title">كتاب الفقه</div>
+      <div class="book-description">دروس في الفقه الإسلامي تشمل الطهارة، الصلاة، الزكاة، الصيام، والحج.</div>
+      <div class="book-buttons">
+        <a href="fikh.html" target="_blank">قراءة الكتاب</a>
+        <a href="fikh.html" download class="download">تحميل </a>
+      </div>
+    </div>
+
+    <div class="book">
+        <div class="book-title">كتاب الأخلاق الإسلامية</div>
+        <div class="book-description">يتناول مكارم الأخلاق في الإسلام كالصبر، الصدق، الأمانة، والتواضع.</div>
+        <div class="book-buttons">
+          <a href="akhlak.html" target="_blank">قراءة الكتاب</a>
+          <a href="akhlak.html" download class="download">تحميل </a>
+        </div>
+    </div>
+
+    <div class="book">
+      <div class="book-title">كتاب أصول الفقه</div>
+      <div class="book-description">شرح قواعد استنباط الأحكام من الكتاب والسنة وأدوات الاجتهاد.</div>
+      <div class="book-buttons">
+        <a href="osolfikh.html" target="_blank">قراءة الكتاب</a>
+        <a href="osolfikh.html" download class="download">تحميل </a>
+      </div>
+    </div>
+
+
+    
+
+  </div>
+
+  <div class="logout-container">
+    <a class="logout-btn" href="index1.html" onclick="localStorage.clear()">الخروج</a>
+  </div>
+</div>
+
+</body>
+</html>

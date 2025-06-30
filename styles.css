@@ -1,0 +1,157 @@
+:root{
+padding:0;
+margin: 0;
+font-family: sans-serif;
+box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+  
+
+   background-image: linear-gradient( #bee09d ,#bef0b6);
+}
+.wrapper{
+ max-width: 650px;
+ padding: 25px;
+ margin: 0 28px;
+ border-radius: 10px;
+ overflow: hidden;
+ background: rgba(0,0,0,0.2);
+ box-shadow:  0 15px 20px rgba(0, 0, 0, 0.6);
+ 
+}
+h1{
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 8px;
+    border-bottom: 1px solid silver;
+}
+
+.content{
+display: flex;
+flex-wrap:wrap;
+justify-content: space-between;
+padding: 20px 0;
+
+}
+.input_box{
+display: flex;
+flex-wrap: wrap;
+width: 50%;
+padding-bottom: 15px;
+}
+.input_box:nth-child(2n){
+    justify-content: end;
+}
+.input_box label,.sexe_type{
+width: 95%;
+color: #fff;
+font-weight: bold;
+margin: 5px 0;
+}
+.sexe_type{
+    font-size: 18px;
+    padding-top: 10px;
+}
+.input_box input{
+    height: 40px;
+    width: 90%;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 1px solid #302f2f;
+    outline: none;
+}
+.input_box input:is(:focus,:valid){
+    box-shadow: 0 3px 6px rgba(66, 65, 65, 0.2);
+}
+.sexe_input  label{
+    padding: 0 20px 0 5px;
+    font-size: 20px;
+
+}
+.sexe_type{
+    color: #fff;
+}
+
+.display-3 text-white animated slideInDown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 30px;
+}
+.sexe_type label,.sexe_type input{
+    cursor: pointer;
+}
+.alert{
+    font-size: 14px;
+    font-family: italic;
+    color: #fff;
+    margin: 5px 0;
+    padding: 10px;
+    line-height: 1.5;
+}
+.button-container{
+    margin: 15px 0;
+ 
+}
+.button-container button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    font-size: 28px;
+    color: #fff;
+    border:none;
+    border-radius: 10px;
+    background-image: linear-gradient(to right,#6f9b6d,#090909);
+    cursor: pointer;
+    
+
+}
+.button-container button:hover{
+    background-image: linear-gradient(to right,#264606,#43770e);
+}
+.content{
+    
+    align-items: left;
+}
+
+
+.sys_type label,.sys_type input{
+
+    cursor: pointer;
+   
+}
+
+.sys_type{
+    font-weight: bold;
+    margin: 5px  0;
+    color: #fff;
+    padding-bottom: 6px ;
+    padding-left: 380px;
+}
+
+.type_input label{
+    padding:  0 20px 4px ;
+    font-size: 18px;
+
+ 
+}
+#dossier_medical{
+ 
+    padding-bottom: 29px ;
+    font-size: 18px;
+}
+   
+.e{
+    color: #fff;
+    font-weight: bold;
+}
+

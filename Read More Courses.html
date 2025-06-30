@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>أنظمتنا التعليمية</title>
+  <link rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Arial';
+      padding: 30px;
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #00796b;
+    }
+
+    .system-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .system-box {
+      position: relative;
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(50px) scale(0.95);
+      animation: slideUp 0.8s ease forwards;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid transparent;
+      overflow: hidden;
+    }
+
+
+    .system-box:nth-child(1) { animation-delay: 0.1s; }
+    .system-box:nth-child(2) { animation-delay: 0.3s; }
+    .system-box:nth-child(3) { animation-delay: 0.5s; }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .system-box h2 {
+      color: #00796b;
+      margin: 10px 0 15px;
+      font-size: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .system-box h2::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background-color: #00796b;
+      bottom: -5px;
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    .system-box ul {
+      padding-right: 20px;
+      line-height: 1.8;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .system-box ul li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-right: 20px;
+    }
+
+    .system-box ul li::before {
+      content: "✓";
+      position: absolute;
+      right: 0;
+      color: #00796b;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      display: block;
+      width: fit-content;
+      margin: 50px auto 0;
+      background-color: #06a592;
+      color: #000;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #00796b;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>أنظمة الدراسة والمعلمين</h1>
+
+  <div class="system-container">
+    <div class="system-box">
+      <h2>النظام الدائم</h2>
+      <ul>
+        <li>الحفظ اليومي للقرآن الكريم</li>
+        <li>السبت: السيرة النبوية، الفقه، متون طالب العلم</li>
+        <li>المعلمين: الشيخ أبو المعالي، الشيخ اليمين فندرش ، الشيخ العمري فندرش ، الشيخ مصطفى سمارة ، الشيخ أحمد رحمون ، الشيخة حفصة ، الشيخة ياسمين سمارة </li>
+        <a href="index1.html"  class="btn btn-primary">انضم الآن</a>
+      </ul>
+    </div>
+
+    <div class="system-box">
+      <h2>النظام نصف الدائم</h2>
+      <ul>
+        <li>أيام الدراسة: الخميس، الجمعة، الثلاثاء مساءً</li>
+        <li>اختيار التوقيت المناسب للطالب</li>
+        <li>المواد: حفظ القرآن الكريم</li>
+        <li>المعلمين: الشيخ مصطفى، الشيخ أحمد رحمون</li>
+        <a href="index1.html"  class="btn btn-primary">انضم الآن</a>
+      </ul>
+    </div>
+
+    <div class="system-box">
+      <h2>نظام ما لا يسع المسلم جهله</h2>
+      <ul>
+        <li> الدروس: السيرة النبوية، العقيدة، علم المواريث، أصول الفقه ، الفقه ، أخلاق ، أحكام التجويد ، النحو و الصرف ،  فن الخطابة</li>
+        <li>أيام الدراسة: الجمعة والسبت</li>
+        <li>المعلمين: الشيخ أبو المعالي الظاهري ، الشيخ أبو الفضائل المالكي</li>
+        <a href="pagefirst.html"  class="btn btn-primary">انضم الآن</a>
+      </ul>
+    </div>
+  </div>
+
+  <a href="index.html" class="btn btn-primary">الرجوع إلى الصفحة الرئيسية</a>
+
+</body>
+</html>

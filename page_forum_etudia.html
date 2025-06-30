@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>صفحة لانضمام التلميذ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    direction: rtl;
+    animation: fadeIn 1.2s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .back-button {
+    display: inline-block;
+    margin: 20px;
+    color: #00796b;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  .back-button i {
+    margin-left: 8px;
+  }
+
+  .back-button:hover {
+    color: #004d40;
+  }
+
+  .container {
+    background-color: #ffffff;
+    margin: 30px auto;
+    padding: 30px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 121, 107, 0.2);
+    max-width: 500px;
+  }
+
+  .welcome {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #004d40;
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #00796b;
+    margin-bottom: 25px;
+  }
+
+  label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #00796b;
+    font-weight: bold;
+  }
+
+  .input-icon {
+    position: relative;
+    margin-bottom: 15px;
+  }
+
+  .input-icon i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00796b;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="tel"],
+  select {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+
+  textarea {
+    font-family: 'Cairo', sans-serif;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #00796b;
+    outline: none;
+    box-shadow: 0 0 6px #b2dfdb;
+  }
+
+  .radio-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+
+  .radio-group label {
+    font-weight: normal;
+    color: #333;
+  }
+
+  .error-message {
+    color: crimson;
+    font-size: 14px;
+    display: none;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+
+  button:hover {
+    background-color: #004d40;
+  }
+
+  .success-message {
+    color: green;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 15px;
+    display: none;
+  }
+</style>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <a href="index.html" class="back-button"><i class="fas fa-arrow-right"></i> العودة الصفحة الرئيسية</a>
+  <div class="welcome">معهد عثمان بن عفان لتدريس القرآن الكريم وعلومه</div>
+  <div class="container">
+    
+    <h1>استمارة البيانات الشخصية</h1>
+
+    <form action="forum.php" method="POST">
+      <label for="nom">الاسم:</label>
+      <div class="input-icon">
+        <i class="fas fa-user"></i>
+        <input type="text" id="nom" name="nom" required>
+      </div>
+      <div id="nomError" class="error-message">الرجاء إدخال الاسم.</div>
+
+
+      <label for="prenom">اللقب:</label>
+      <div class="input-icon">
+        <i class="fas fa-user-tag"></i>
+        <input type="text" id="prenom" name="prenom" required>
+      </div>
+      <div id="prenomError" class="error-message">الرجاء إدخال اللقب.</div>
+
+      <label for="age">العمر:</label>
+      <div class="input-icon">
+        <i class="fas fa-hourglass-half"></i>
+        <input type="number" id="age" name="age" min="0" max="130" required>
+      </div>
+      <div id="ageError" class="error-message">يرجى إدخال عمر صحيح بين 0 و130.</div>
+
+      <label>الجنس:</label>
+      <div class="radio-group" required>
+        <label><input type="radio" name="sexe" value="ذكر"> ذكر</label>
+        <label><input type="radio" name="sexe" value="أنثى"> أنثى</label>
+      </div>
+      <div id="sexeError" class="error-message">الرجاء اختيار الجنس.</div>
+
+      <label for="type">نوع النظام:</label>
+      <div class="input-icon">
+        
+        <select id="type" name="type_sys" required>
+          <option value="">-- اختر النوع --</option>
+          <option value="استشارة">النظام الدائم</option>
+          <option value="استشفاء">النظام الشبه الدائم</option>
+          <option value="تطعيم">النظام مالا يسع المسلم جهله</option>
+        </select>
+      </div>
+      <div id="typeError" class="error-message">الرجاء اختيار نوع النظام.</div>
+
+      <div id="parentPhoneContainer">
+       <label for="contact">رقم الهاتف:</label>
+      <div class="input-icon">
+       <input type="tel" id="contact" name="contact" placeholder="مثال: 0591234567" required>
+      </div>
+      <div id="contactError" class="error-message">الرجاء إدخال رقم الهاتف.</div>
+      </div>
+
+      <label for="contact">الحالة الصحية للطالب :</label>
+      <textarea id="dossier" name="dossier_medical" placeholder="أكتب الحالة الصحية هنا..." rows="5" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; resize: vertical;" required></textarea>
+
+      <button type="submit"> إرسال المعلومات</button>
+    </form>
+    <div class="success-message" id="successMsg">✅ تم إرسال المعلومات بنجاح</div>
+  </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
+  const age = document.getElementById("age");
+  const parentPhoneContainer = document.getElementById("parentPhoneContainer");
+  const contact = document.getElementById("contact");
+
+  // Validation au moment de l'envoi du formulaire
+  form.addEventListener("submit", function (e) {
+    let isValid = true;
+
+    // Réinitialiser les messages d'erreur
+    document.querySelectorAll(".error-message").forEach(el => el.style.display = "none");
+
+    // Vérif nom
+    if (document.getElementById("nom").value.trim() === "") {
+      document.getElementById("nomError").style.display = "block";
+      isValid = false;
+    }
+
+    // Vérif prénom
+    if (document.getElementById("prenom").value.trim() === "") {
+      document.getElementById("prenomError").style.display = "block";
+      isValid = false;
+    }
+
+    // Vérif âge
+    const ageValue = parseInt(age.value);
+    if (isNaN(ageValue) || ageValue < 0 || ageValue > 130) {
+      document.getElementById("ageError").style.display = "block";
+      isValid = false;
+    }
+
+    // Vérif sexe
+    const sexeChecked = document.querySelector('input[name="sexe"]:checked');
+    if (!sexeChecked) {
+      document.getElementById("sexeError").style.display = "block";
+      isValid = false;
+    }
+
+    // Vérif type
+    const type = document.getElementById("type");
+    if (type.value === "") {
+      document.getElementById("typeError").style.display = "block";
+      isValid = false;
+    }
+
+  
+
+    // Empêche l'envoi si erreurs
+    if (!isValid) {
+      e.preventDefault();
+    }
+  });
+});
+</script>
+</body>
+</html>

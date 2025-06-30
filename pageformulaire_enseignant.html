@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>استمارة انضمام الأستاذ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    direction: rtl;
+    animation: fadeIn 1.2s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .back-button {
+    display: inline-block;
+    margin: 20px;
+    color: #00796b;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  .back-button i {
+    margin-left: 8px;
+  }
+
+  .back-button:hover {
+    color: #004d40;
+  }
+
+  .container {
+    background-color: #ffffff;
+    margin: 30px auto;
+    padding: 30px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 121, 107, 0.2);
+    max-width: 500px;
+  }
+
+  .welcome {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #004d40;
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #00796b;
+    margin-bottom: 25px;
+  }
+
+  label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #00796b;
+    font-weight: bold;
+  }
+
+  .input-icon {
+    position: relative;
+    margin-bottom: 15px;
+  }
+
+  .input-icon i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00796b;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="tel"],
+  select {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+
+  textarea {
+    font-family: 'Cairo', sans-serif;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #00796b;
+    outline: none;
+    box-shadow: 0 0 6px #b2dfdb;
+  }
+
+  .radio-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+
+  .radio-group label {
+    font-weight: normal;
+    color: #333;
+  }
+
+  .error-message {
+    color: crimson;
+    font-size: 14px;
+    display: none;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+
+  button:hover {
+    background-color: #004d40;
+  }
+
+  .success-message {
+    color: green;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 15px;
+    display: none;
+  }
+</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="welcome">معهد عثمان بن عفان لتدريس القرآن الكريم وعلومه</div>
+  <div class="container">
+  
+    <h2 style="text-align: center;">استمارة انضمام الأستاذ</h2>
+
+     <form action="forum_enseign.php" method="POST">
+
+  
+   <label>الاسم:</label>
+      <div class="input-icon">
+        <i class="fas fa-user"></i>
+        <input type="text" name="nom" id="nom" required>
+        <div class="error-msg" id="nomError"></div>
+      </div>
+
+      <label>اللقب:</label>
+      <div class="input-icon">
+        <i class="fas fa-user-tag"></i>
+        <input type="text" name="prenom" id="prenom" required>
+        <div class="error-msg" id="prenomError"></div>
+      </div>
+
+         <label for="occupation">الوظيفة</label>
+      <select id="occupation" name="occupation" required>
+        <option value="أستاذ محاضر">أستاذ محاضر</option>
+        <option value="مدرس قرآن">مدرس قرآن</option>
+      </select>
+
+      <label>الجنس:</label>
+      <div class="radio-group" id="genderGroup">
+        <label><input type="radio" name="sexe" value="ذكر" required> ذكر</label>
+        <label><input type="radio" name="sexe" value="أنثى"> أنثى</label>
+        <div class="error-msg" id="sexeError"></div>
+      </div>
+
+      <label>نوع النظام:</label>
+      <div class="input-icon">
+
+        <select name="type" id="type" required>
+          <option value="">-- اختر نوع النظام الذي تريده--</option>
+          <option value="دائم">نظام دائم</option>
+          <option value="شبه دائم">نظام شبه دائم</option>
+          <option value="تكويني">نظام مالا يسع المسلم تجاهله</option>
+        </select>
+        <div class="error-msg" id="typeError"></div>
+      </div>
+
+
+      <label>التواصل:</label>
+      <div class="input-icon">
+        <i class="fas fa-envelope"></i>
+        <input type="text" name="email" id="email" placeholder="example@email.com" required>
+        <div class="error-msg" id="emailError"></div>
+      </div>
+
+      <label>الملف:</label>
+      <input type="text" name="dossier" required/>
+
+      <button type="submit" id="submitBtn" disabled>إرسال المعلومات</button>
+    </form>
+
+    <div class="success-message" id="successMsg">تم إرسال المعلومات بنجاح </div>
+   </div>
+
+
+   <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const nom = document.getElementById("nom");
+  const prenom = document.getElementById("prenom");
+  const sexeRadios = document.getElementsByName("sexe");
+  const type = document.getElementById("type");
+  const email = document.getElementById("email");
+  const submitBtn = document.getElementById("submitBtn");
+
+  const nomError = document.getElementById("nomError");
+  const prenomError = document.getElementById("prenomError");
+  const sexeError = document.getElementById("sexeError");
+  const typeError = document.getElementById("typeError");
+  const emailError = document.getElementById("emailError");
+
+  function validateField(input, errorElement, message) {
+    if (!input.value.trim()) {
+      errorElement.textContent = message;
+      return false;
+    } else {
+      errorElement.textContent = "";
+      return true;
+    }
+  }
+
+  function validateSexe() {
+    const selected = Array.from(sexeRadios).some(radio => radio.checked);
+    if (!selected) {
+      sexeError.textContent = "الرجاء اختيار الجنس";
+      return false;
+    } else {
+      sexeError.textContent = "";
+      return true;
+    }
+  }
+
+  function validateEmail() {
+    const emailVal = email.value.trim();
+    const regex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+    if (!regex.test(emailVal)) {
+      emailError.textContent = "بريد إلكتروني غير صالح";
+      return false;
+    } else {
+      emailError.textContent = "";
+      return true;
+    }
+  }
+
+  function checkAll() {
+    const validNom = validateField(nom, nomError, "الاسم مطلوب");
+    const validPrenom = validateField(prenom, prenomError, "اللقب مطلوب");
+    const validSexe = validateSexe();
+    const validType = validateField(type, typeError, "الرجاء اختيار نوع النظام");
+    const validEmail = validateEmail();
+
+    submitBtn.disabled = !(validNom && validPrenom && validSexe && validType && validEmail);
+  }
+
+  [nom, prenom, type, email].forEach(input => {
+    input.addEventListener("input", checkAll);
+  });
+
+  sexeRadios.forEach(radio => {
+    radio.addEventListener("change", checkAll);
+  });
+
+  checkAll(); // initial check
+});
+</script>
+ </body>
+</html>
