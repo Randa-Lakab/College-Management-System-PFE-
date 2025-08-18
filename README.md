@@ -2,7 +2,7 @@
 
 This project is a dynamic educational website developed as part of a Final Year Project (PFE). It is designed to serve an Islamic educational institution (Othman Ibn Affane Institution for teaching Coran and it's Sciences), with features for managing teachers, subjects, sessions, and user interaction via forums.
 
-## 🌐 Website Overview
+##  Website Overview
 
 The site includes:
 - An informative homepage
@@ -13,27 +13,27 @@ The site includes:
 - Forums for discussions (students and teachers)
 - Secure login system
 
-## 🧰 Technologies Used
+##  Technologies Used
 
 - **Frontend**: HTML5, CSS3, Bootstrap 4, Animate.css, Owl Carousel
 - **Backend**: PHP
 - **Database**: MySQL (via phpMyAdmin)
 - **Local server**: XAMPP
 
-## 🌐 Website Overview
+##  Website Overview
 
 The platform includes:
 
-- 🏠 **Homepage** with navigation and course overview
-- 📖 **Course Pages** on Islamic teachings (Aqidah, Fiqh, Hadith, Akhlaq)
-- 👩‍🏫 **Teacher Management** – Add/view teachers dynamically via PHP/MySQL
-- 📅 **Session Management** – Create and view sessions
-- 💬 **Forum** – Students and teachers can interact (simple PHP forum)
-- 🔐 **Login System** – Basic authentication system using PHP sessions
-- 📨 **Contact Form** – Static HTML form (demo only)
+-  **Homepage** with navigation and course overview
+-  **Course Pages** on Islamic teachings (Aqidah, Fiqh, Hadith, Akhlaq)
+-  **Teacher Management** – Add/view teachers dynamically via PHP/MySQL
+-  **Session Management** – Create and view sessions
+-  **Forum** – Students and teachers can interact (simple PHP forum)
+-  **Login System** – Basic authentication system using PHP sessions
+-  **Contact Form** – Static HTML form (demo only)
 
 
-## 🚀 How to Run the Project Locally (Using XAMPP)
+##  How to Run the Project Locally (Using XAMPP)
 
 To run the site on your local machine using XAMPP, follow these steps:
 
