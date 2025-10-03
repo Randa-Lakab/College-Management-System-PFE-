@@ -20,7 +20,7 @@ The site includes:
 - **Database**: MySQL (via phpMyAdmin)
 - **Local server**: XAMPP
 
-##  Website Overview
+###  Website Overview
 
 The platform includes:
 
