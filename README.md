@@ -33,7 +33,7 @@ The platform includes:
 -  **Contact Form** – Static HTML form (demo only)
 
 
-##  How to Run the Project Locally (Using XAMPP)
+###  How to Run the Project Locally (Using XAMPP)
 
 To run the site on your local machine using XAMPP, follow these steps:
 
