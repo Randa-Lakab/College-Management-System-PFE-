@@ -13,7 +13,7 @@ The site includes:
 - Forums for discussions (students and teachers)
 - Secure login system
 
-##  Technologies Used
+###  Technologies Used
 
 - **Frontend**: HTML5, CSS3, Bootstrap 4, Animate.css, Owl Carousel
 - **Backend**: PHP
