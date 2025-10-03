@@ -2,7 +2,7 @@
 
 This project is a dynamic educational website developed as part of a Final Year Project (PFE). It is designed to serve an Islamic educational institution (Othman Ibn Affane Institution for teaching Coran and it's Sciences), with features for managing teachers, subjects, sessions, and user interaction via forums.
 
-##  Website Overview
+###  Website Overview
 
 The site includes:
 - An informative homepage
