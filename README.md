@@ -20,19 +20,6 @@ The site includes:
 - **Database**: MySQL (via phpMyAdmin)
 - **Local server**: XAMPP
 
-###  Website Overview
-
-The platform includes:
-
--  **Homepage** with navigation and course overview
--  **Course Pages** on Islamic teachings (Aqidah, Fiqh, Hadith, Akhlaq)
--  **Teacher Management** – Add/view teachers dynamically via PHP/MySQL
--  **Session Management** – Create and view sessions
--  **Forum** – Students and teachers can interact (simple PHP forum)
--  **Login System** – Basic authentication system using PHP sessions
--  **Contact Form** – Static HTML form (demo only)
-
-
 ###  How to Run the Project Locally (Using XAMPP)
 
 To run the site on your local machine using XAMPP, follow these steps:
